@@ -5,10 +5,10 @@ import java.awt.*;
 import java.awt.event.*;
 
 public class GamePanel extends JPanel implements GameContents, ActionListener {
-         public int SPEED;
+         public int SPEED;   // to check the difficulty of the game (Delay)
          private  Snake snake;
          private  Apple apple;
-         private Timer timer;
+         private Timer timer;  // A part of the swing libirary to make the snake able to move by repaint the panel
          boolean running = true;
          char Direction = 'R';
          private  JButton exit ;
@@ -38,6 +38,7 @@ public class GamePanel extends JPanel implements GameContents, ActionListener {
         timer.start();
     }
 
+        // draw each move to the sanke and the random apple
     public void draw(Graphics g){
         if(running) {
             //Score
@@ -90,7 +91,7 @@ public class GamePanel extends JPanel implements GameContents, ActionListener {
                 break;
         }
     }
-
+       // Check eating the apple
     public void checkApple() {
         if(snake.getX(0)==apple.getAppleX() && snake.getY(0)==apple.getAppleY()){
             apple.increaseAppleEaten();
@@ -209,6 +210,8 @@ public class GamePanel extends JPanel implements GameContents, ActionListener {
         }
     }
 
+      /** An inner class to have control on buttons after 
+         game over screen appear */
     private class mouseController extends MouseAdapter{
         @Override
         public void mouseClicked(MouseEvent e){
