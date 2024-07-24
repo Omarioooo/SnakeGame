@@ -51,6 +51,34 @@ public class GameMenu extends JFrame implements  ActionListener  {
         easyButton.addActionListener(this);
         mediumButton.addActionListener(this);
         hardButton.addActionListener(this);
+           
+         /*
+        // easyButton.addActionListener(this); ---> could be like that if use "anonymous inner class"
+        easyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Easy button clicked!");
+            }
+        });
+
+         // mediumButton.addActionListener(this); ---> could be like that if use "anonymous inner class"
+        mediumButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Medium button clicked!");
+            }
+        });
+
+
+         // hardButton.addActionListener(this); ---> could be like that if use "anonymous inner class"
+        hardButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Hard button clicked!");
+            }
+        });
+        
+         */
 
          // Group difficulty buttons
         difficultyGroup = new ButtonGroup();
